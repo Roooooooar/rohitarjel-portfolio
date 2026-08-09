@@ -1561,3 +1561,43 @@ li::before {
     font-size: 0.78rem !important;
   }
 }
+
+/* --- Instagram Reels Section --- */
+.instagram-section {
+  padding: 80px 0;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--glass-border);
+}
+
+.instagram-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.instagram-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-main);
+  padding: 16px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.instagram-video-wrapper {
+  width: 100%;
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  background: #000;
+  height: 560px;
+}
