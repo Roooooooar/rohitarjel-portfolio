@@ -668,4 +668,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Reels Lazy Loader & Player ---
+    const reelCards = document.querySelectorAll('.reel-play-card');
+    reelCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const embedUrl = card.getAttribute('data-embed-url');
+            const wrapper = card.querySelector('.video-iframe-wrapper');
+            const thumbnail = card.querySelector('.video-thumbnail');
+            
+            if (wrapper && thumbnail && embedUrl) {
+                if (!wrapper.innerHTML) {
+                    wrapper.innerHTML = `<iframe src="${embedUrl}" style="width: 100%; height: 100%; border: none; display: block;" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`;
+                }
+                thumbnail.style.opacity = '0';
+                setTimeout(() => {
+                    thumbnail.style.display = 'none';
+                    wrapper.style.display = 'block';
+                }, 300);
+                card.style.cursor = 'default';
+            }
+        });
+    });
+
 });

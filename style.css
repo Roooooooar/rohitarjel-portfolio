@@ -1601,3 +1601,17 @@ li::before {
   background: #000;
   height: 610px;
 }
+
+.reel-play-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08) !important;
+}
+
+.reel-play-card:hover .play-btn {
+  transform: scale(1.1);
+  background: var(--accent) !important;
+}
+
+.reel-play-card:hover .play-btn svg {
+  color: #fff !important;
+}
