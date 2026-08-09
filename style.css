@@ -1599,5 +1599,5 @@ li::before {
   border-radius: var(--radius-main);
   overflow: hidden;
   background: #000;
-  height: 560px;
+  height: 610px;
 }
