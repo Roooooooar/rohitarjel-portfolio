@@ -431,86 +431,49 @@
             
             <div class="grid-3-col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
               <!-- Reel 01 Card -->
-              <div class="reel-play-card" data-embed-url="https://www.instagram.com/p/DaXvzbbPVne/embed/" style="position: relative; width: 100%; height: 500px; background: #FFF; border: 1px solid var(--glass-border); border-radius: var(--radius-main); display: flex; flex-direction: column; overflow: hidden; cursor: pointer; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div class="video-container" style="position: relative; width: 100%; flex-grow: 1; background: #000; overflow: hidden;">
-                  <div class="video-thumbnail" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); z-index: 2; padding: 20px; text-align: center; color: #FFF; transition: opacity 0.3s ease;">
-                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">Reel 01</div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFF; margin-bottom: 25px; line-height: 1.4;">The SEO myth killing your site</h4>
-                    <div class="play-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); transition: transform 0.2s ease;">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 22px; height: 22px; color: #0f172a; margin-left: 2px;">
-                        <path d="M8 5v14l11-7z"/>
+              <div class="instagram-card" style="width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column;">
+                <div class="instagram-video-wrapper" style="height: 480px; border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+                  <iframe src="https://www.instagram.com/p/DaXvzbbPVne/embed/" style="width: 100%; height: 100%; border: none; display: block;" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <!-- Custom Instagram Native-like Footer to display the 17 likes -->
+                <div style="padding: 12px 4px 4px 4px; display: flex; flex-direction: column; text-align: left; background: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <div style="display: flex; gap: 14px; color: #262626;">
+                      <!-- Heart Icon -->
+                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="cursor: pointer; color: #262626;">
+                        <path d="M16.792 3.904A4.989 4.989 0 0 1 20.35 5.4a5.001 5.001 0 0 1 0 7.07l-8.35 8.35-8.35-8.35a5.001 5.001 0 0 1 0-7.07 4.989 4.989 0 0 1 3.558-1.496 4.989 4.989 0 0 1 3.558 1.496l1.234 1.234a.25.25 0 0 0 .354 0l1.234-1.234a4.989 4.989 0 0 1 3.558-1.496m0-2A6.987 6.987 0 0 0 11.8 3.9L12 4.1l.2-.2A6.987 6.987 0 0 0 7.208 1.9a6.987 6.987 0 0 0-4.95 2.05 6.987 6.987 0 0 0 0 9.9l8.35 8.35a1.996 1.996 0 0 0 2.8 0l8.35-8.35a6.987 6.987 0 0 0 0-9.9 6.987 6.987 0 0 0-4.95-2.05z"></path>
+                      </svg>
+                      <!-- Comment Icon -->
+                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="cursor: pointer; color: #262626;">
+                        <path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
+                      </svg>
+                      <!-- Share Icon -->
+                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="cursor: pointer; color: #262626;">
+                        <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="2" y2="14.782"></line>
+                        <polygon fill="none" points="11.698 20.334 22 2 12.174 12.826 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
                       </svg>
                     </div>
-                    <span style="font-size: 0.75rem; font-weight: 600; color: #94a3b8; margin-top: 25px; text-transform: uppercase; letter-spacing: 0.5px;">Click to Play Video</span>
+                    <!-- Save Icon -->
+                    <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="cursor: pointer; color: #262626;">
+                      <polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon>
+                    </svg>
                   </div>
-                  <div class="video-iframe-wrapper" style="width: 100%; height: 100%; display: none;"></div>
-                </div>
-                <div style="padding: 12px 16px; background: #fff; border-top: 1px solid rgba(15, 23, 42, 0.06); display: flex; flex-direction: column; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; pointer-events: none;">
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                    <div style="display: flex; gap: 14px; color: #262626;">
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M16.792 3.904A4.989 4.989 0 0 1 20.35 5.4a5.001 5.001 0 0 1 0 7.07l-8.35 8.35-8.35-8.35a5.001 5.001 0 0 1 0-7.07 4.989 4.989 0 0 1 3.558-1.496 4.989 4.989 0 0 1 3.558 1.496l1.234 1.234a.25.25 0 0 0 .354 0l1.234-1.234a4.989 4.989 0 0 1 3.558-1.496m0-2A6.987 6.987 0 0 0 11.8 3.9L12 4.1l.2-.2A6.987 6.987 0 0 0 7.208 1.9a6.987 6.987 0 0 0-4.95 2.05 6.987 6.987 0 0 0 0 9.9l8.35 8.35a1.996 1.996 0 0 0 2.8 0l8.35-8.35a6.987 6.987 0 0 0 0-9.9 6.987 6.987 0 0 0-4.95-2.05z"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="2" y2="14.782"></line><polygon fill="none" points="11.698 20.334 22 2 12.174 12.826 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                    </div>
-                    <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                  </div>
-                  <strong style="font-size: 0.85rem; color: #000; font-weight: 700;">17 likes</strong>
+                  <strong style="font-size: 0.85rem; color: #000; margin-bottom: 6px; font-weight: 700; letter-spacing: -0.1px;">17 likes</strong>
+                  <span style="font-size: 0.85rem; color: #737373; font-weight: 400;">Add a comment...</span>
                 </div>
               </div>
 
               <!-- Reel 02 Card -->
-              <div class="reel-play-card" data-embed-url="https://www.instagram.com/reel/Dbk_TiwvMpo/embed/" style="position: relative; width: 100%; height: 500px; background: #FFF; border: 1px solid var(--glass-border); border-radius: var(--radius-main); display: flex; flex-direction: column; overflow: hidden; cursor: pointer; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div class="video-container" style="position: relative; width: 100%; flex-grow: 1; background: #000; overflow: hidden;">
-                  <div class="video-thumbnail" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); z-index: 2; padding: 20px; text-align: center; color: #FFF; transition: opacity 0.3s ease;">
-                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">Reel 02</div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFF; margin-bottom: 25px; line-height: 1.4;">Why ChatGPT Won't Recommend You</h4>
-                    <div class="play-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); transition: transform 0.2s ease;">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 22px; height: 22px; color: #0f172a; margin-left: 2px;">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <span style="font-size: 0.75rem; font-weight: 600; color: #94a3b8; margin-top: 25px; text-transform: uppercase; letter-spacing: 0.5px;">Click to Play Video</span>
-                  </div>
-                  <div class="video-iframe-wrapper" style="width: 100%; height: 100%; display: none;"></div>
-                </div>
-                <div style="padding: 12px 16px; background: #fff; border-top: 1px solid rgba(15, 23, 42, 0.06); display: flex; flex-direction: column; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; pointer-events: none;">
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                    <div style="display: flex; gap: 14px; color: #262626;">
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M16.792 3.904A4.989 4.989 0 0 1 20.35 5.4a5.001 5.001 0 0 1 0 7.07l-8.35 8.35-8.35-8.35a5.001 5.001 0 0 1 0-7.07 4.989 4.989 0 0 1 3.558-1.496 4.989 4.989 0 0 1 3.558 1.496l1.234 1.234a.25.25 0 0 0 .354 0l1.234-1.234a4.989 4.989 0 0 1 3.558-1.496m0-2A6.987 6.987 0 0 0 11.8 3.9L12 4.1l.2-.2A6.987 6.987 0 0 0 7.208 1.9a6.987 6.987 0 0 0-4.95 2.05 6.987 6.987 0 0 0 0 9.9l8.35 8.35a1.996 1.996 0 0 0 2.8 0l8.35-8.35a6.987 6.987 0 0 0 0-9.9 6.987 6.987 0 0 0-4.95-2.05z"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="2" y2="14.782"></line><polygon fill="none" points="11.698 20.334 22 2 12.174 12.826 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                    </div>
-                    <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                  </div>
-                  <strong style="font-size: 0.85rem; color: #000; font-weight: 700;">8 likes</strong>
+              <div class="instagram-card" style="width: 100%; max-width: 100%; margin: 0;">
+                <div class="instagram-video-wrapper">
+                  <iframe src="https://www.instagram.com/reel/Dbk_TiwvMpo/embed/" style="width: 100%; height: 100%; border: none; display: block;" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
               </div>
 
               <!-- Reel 03 Card -->
-              <div class="reel-play-card" data-embed-url="https://www.instagram.com/reel/Da73rw8vdjC/embed/" style="position: relative; width: 100%; height: 500px; background: #FFF; border: 1px solid var(--glass-border); border-radius: var(--radius-main); display: flex; flex-direction: column; overflow: hidden; cursor: pointer; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div class="video-container" style="position: relative; width: 100%; flex-grow: 1; background: #000; overflow: hidden;">
-                  <div class="video-thumbnail" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); z-index: 2; padding: 20px; text-align: center; color: #FFF; transition: opacity 0.3s ease;">
-                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">Reel 03</div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFF; margin-bottom: 25px; line-height: 1.4;">The SEO trick big brands miss</h4>
-                    <div class="play-btn" style="width: 56px; height: 56px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); transition: transform 0.2s ease;">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 22px; height: 22px; color: #0f172a; margin-left: 2px;">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <span style="font-size: 0.75rem; font-weight: 600; color: #94a3b8; margin-top: 25px; text-transform: uppercase; letter-spacing: 0.5px;">Click to Play Video</span>
-                  </div>
-                  <div class="video-iframe-wrapper" style="width: 100%; height: 100%; display: none;"></div>
-                </div>
-                <div style="padding: 12px 16px; background: #fff; border-top: 1px solid rgba(15, 23, 42, 0.06); display: flex; flex-direction: column; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; pointer-events: none;">
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                    <div style="display: flex; gap: 14px; color: #262626;">
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M16.792 3.904A4.989 4.989 0 0 1 20.35 5.4a5.001 5.001 0 0 1 0 7.07l-8.35 8.35-8.35-8.35a5.001 5.001 0 0 1 0-7.07 4.989 4.989 0 0 1 3.558-1.496 4.989 4.989 0 0 1 3.558 1.496l1.234 1.234a.25.25 0 0 0 .354 0l1.234-1.234a4.989 4.989 0 0 1 3.558-1.496m0-2A6.987 6.987 0 0 0 11.8 3.9L12 4.1l.2-.2A6.987 6.987 0 0 0 7.208 1.9a6.987 6.987 0 0 0-4.95 2.05 6.987 6.987 0 0 0 0 9.9l8.35 8.35a1.996 1.996 0 0 0 2.8 0l8.35-8.35a6.987 6.987 0 0 0 0-9.9 6.987 6.987 0 0 0-4.95-2.05z"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
-                      <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="2" y2="14.782"></line><polygon fill="none" points="11.698 20.334 22 2 12.174 12.826 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                    </div>
-                    <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" style="color: #262626;"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                  </div>
-                  <strong style="font-size: 0.85rem; color: #000; font-weight: 700;">13 likes</strong>
+              <div class="instagram-card" style="width: 100%; max-width: 100%; margin: 0;">
+                <div class="instagram-video-wrapper">
+                  <iframe src="https://www.instagram.com/reel/Da73rw8vdjC/embed/" style="width: 100%; height: 100%; border: none; display: block;" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
               </div>
             </div>
